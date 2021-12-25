@@ -1,0 +1,97 @@
+clc
+clear
+close all
+%%
+% Data Input
+Data=load('hopkinsirandeath.txt')';
+X = Data;
+Y = Data;
+DataNum = size(X,1);
+InputNum = size(X,2);
+OutputNum = size(Y,2);
+
+% Normalization
+MinX = min(X);
+MaxX = max(X);
+MinY = min(Y);
+MaxY = max(Y);
+XN = X;
+YN = Y;
+for ii = 1:InputNum
+    XN(:,ii) = Normalize_Fcn(X(:,ii),MinX(ii),MaxX(ii));
+end
+for ii = 1:OutputNum
+    YN(:,ii) = Normalize_Fcn(Y(:,ii),MinY(ii),MaxY(ii))*rand;
+end
+
+%% Training and Testing  
+TrPercent = 100;
+TrNum = round(DataNum * TrPercent / 100);
+TsNum = DataNum - TrNum;
+R = sort(randperm(DataNum));
+trIndex = R(1 : TrNum);
+tsIndex = R(1+TrNum : end);
+Xtr = XN(trIndex,:);
+Ytr = YN(trIndex,:);
+Xts = XN(tsIndex,:);
+Yts = YN(tsIndex,:);
+
+% Network Structure
+pr = [-1 1];
+PR = repmat(pr,InputNum,1);
+Network = newff(PR,[5 OutputNum],{'tansig' 'tansig'});
+
+% Train
+Network = TrainUsing_GA_Fcn(Network,Xtr,Ytr);
+
+% Validation
+YtrNet = sim(Network,Xtr')';
+YtsNet = sim(Network,Xts')';
+MSEtr = mse(YtrNet - Ytr)
+MSEts = mse(YtsNet - Yts)
+
+% Plot Res
+figure(1)
+plot(Ytr,'-or');
+hold on
+plot(YtrNet,'-sb');
+hold off
+figure(2)
+plot(Yts,'-or');
+hold on
+plot(YtsNet,'-sb');
+hold off
+figure(3)
+t = -1:.1:1;
+plot(t,t,'b','linewidth',2)
+hold on
+plot(Ytr,YtrNet,'ok')
+hold off
+% figure(4)
+% t = -1:.1:1;
+% plot(t,t,'b','linewidth',2)
+% hold on
+% plot(Yts,YtsNet,'ok')
+% hold off
+
+%% Normalize to real scale and plot 
+J=size(Data);
+J=J(1,1);
+for i=1:J
+    FinalGA(i)=YtrNet(i)*Data(i);
+end;
+figure;
+set(gcf, 'Position',  [50, 50, 1000, 300])
+plot(Data);
+hold on;
+plot(FinalGA);
+title('Johns Hopkins Data for Iran COVID Deaths')
+xlabel('Days - From Jan 2020 Till Dec 2021','FontSize',12,...
+       'FontWeight','bold','Color','m');
+ylabel('Number of People','FontSize',12,...
+       'FontWeight','bold','Color','m');
+   datetick('x','mmm');
+legend({'Before GA','After GA'});
+
+
+
