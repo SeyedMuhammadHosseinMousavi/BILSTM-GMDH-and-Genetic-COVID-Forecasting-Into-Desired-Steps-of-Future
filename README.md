@@ -57,3 +57,6 @@ This repository implements **COVID-19 time series forecasting** using advanced t
 ![gmdh forecast](https://user-images.githubusercontent.com/11339420/147384606-e92fe112-47ce-4c2a-a983-3aa2b4d9a623.JPG)
 ![image](https://github.com/user-attachments/assets/3a4bc936-5438-4710-a4d1-ef9a06f46a73)
 
+- Download the dataset by "john hopkins university":
+https://github.com/CSSEGISandData?tab=repositories
+https://github.com/CSSEGISandData/COVID-19_Unified-Dataset
