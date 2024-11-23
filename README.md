@@ -1,5 +1,6 @@
 # From data to action: Empowering COVID-19 monitoring and forecasting with intelligent algorithms
 From data to action: Empowering COVID-19 monitoring and forecasting with intelligent algorithms
+![image](https://github.com/user-attachments/assets/bc176117-0337-4a38-8745-688f7e4538e3)
 
 # COVID-19 Time Series Forecasting
 
@@ -54,4 +55,5 @@ This repository implements **COVID-19 time series forecasting** using advanced t
 ---
 
 ![gmdh forecast](https://user-images.githubusercontent.com/11339420/147384606-e92fe112-47ce-4c2a-a983-3aa2b4d9a623.JPG)
+![image](https://github.com/user-attachments/assets/3a4bc936-5438-4710-a4d1-ef9a06f46a73)
 
