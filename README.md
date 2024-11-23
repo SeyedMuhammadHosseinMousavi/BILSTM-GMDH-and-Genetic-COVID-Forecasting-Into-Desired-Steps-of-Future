@@ -60,6 +60,6 @@ This repository implements **COVID-19 time series forecasting** using advanced t
 - Download the dataset by "john hopkins university":
 - https://github.com/CSSEGISandData?tab=repositories
 - https://github.com/CSSEGISandData/COVID-19_Unified-Dataset
-- Link to the papers:
+- Link to papers:
 - https://www.tandfonline.com/doi/full/10.1080/01605682.2023.2240354#abstract
 - http://dx.doi.org/10.6084/m9.figshare.14396258
