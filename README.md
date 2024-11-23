@@ -8,7 +8,7 @@ This repository implements **COVID-19 time series forecasting** using advanced t
 ![genetic forcast](https://user-images.githubusercontent.com/11339420/147384603-a65c6a99-ed67-4520-86de-ad57aee63ffd.JPG)
 ---
 
-## 🚀 Features
+## Features
 
 - **Forecasting Models**:
   - **ARIMA**: Auto-Regressive Integrated Moving Average for statistical forecasting.
@@ -30,7 +30,7 @@ This repository implements **COVID-19 time series forecasting** using advanced t
 
 ## 📊 Methodology
 
-### 1️⃣ **Forecasting Techniques**
+### 1**Forecasting Techniques**
 - **ARIMA**:
   - A classical statistical model for forecasting time series data.
   - Best suited for univariate data with stationary patterns.
