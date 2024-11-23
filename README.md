@@ -6,6 +6,10 @@ From data to action: Empowering COVID-19 monitoring and forecasting with intelli
 
 This repository implements **COVID-19 time series forecasting** using advanced techniques inspired by research from the paper [*From data to action: Empowering COVID-19 monitoring and forecasting through advanced analytics*](https://www.tandfonline.com/doi/full/10.1080/01605682.2023.2240354). It includes methods such as **ARIMA**, **BiLSTM**, **GMDH**, **Genetic Algorithm**, and **TSK Fuzzy Logic** for robust and accurate forecasting of pandemic trends.
 
+Please cite:
+
+Charles, Vincent, et al. "From data to action: Empowering COVID-19 monitoring and forecasting with intelligent algorithms." Journal of the Operational Research Society 75.7 (2024): 1261-1278.
+
 ![genetic forcast](https://user-images.githubusercontent.com/11339420/147384603-a65c6a99-ed67-4520-86de-ad57aee63ffd.JPG)
 ---
 
